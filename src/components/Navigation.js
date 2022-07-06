@@ -1,12 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/images/logo.png";
 import "./Navigation.scss";
 
 const Navigation = () => {
   return (
     <div className="navigation">
       <div className="logo">
-        <NavLink to="/">Olga Schastlivceva</NavLink>
+        <NavLink to="/">
+          <img src={Logo} alt="logo" />
+        </NavLink>
       </div>
       <nav className="nav">
         <NavLink
