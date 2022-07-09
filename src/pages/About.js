@@ -1,5 +1,5 @@
 import React from "react";
-import Olga from "../assets/images/about.jpg";
+import Olya from "../assets/images/about.jpg";
 import "./About.scss";
 
 const About = () => {
@@ -9,14 +9,14 @@ const About = () => {
         <span>
           Hey,
           <br />
-          I'm Olga
+          I'm Olya
         </span>
       </div>
       <div className="about-info">
         <article>
           <p>Hi there!</p>
           <p>
-            I'm so glad you're here! I'm Olga, a lifestyle photographer. I'm
+            I'm so glad you're here! I'm Olya, a lifestyle photographer. I'm
             married and have two kids. I'm a nature lover.
           </p>
           <p>
@@ -30,7 +30,7 @@ const About = () => {
             be shy. Just be yourself, and we'll take some fantastic pictures.
           </p>
         </article>
-        <img src={Olga} alt="my photo" />
+        <img src={Olya} alt="Smiling beautiful woman" />
       </div>
     </div>
   );
