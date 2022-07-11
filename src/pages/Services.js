@@ -10,7 +10,7 @@ const servicesData = [
       "up to 1 - 1.5 hour",
       "1 location",
       "1 outfit",
-      "20+ edited pictures (online gallery)",
+      "20+ edited pictures**",
       "up 5-7 days editing time",
     ],
     additional:
@@ -23,7 +23,7 @@ const servicesData = [
       "up to 1 - 1.5 hour",
       "1 location",
       "1 outfit",
-      "20+ edited pictures (online gallery)",
+      "20+ edited pictures**",
       "up 5-7 days editing time",
     ],
     additional:
@@ -36,7 +36,7 @@ const servicesData = [
       "up 1.5 hour",
       "1 location",
       "1 outfit",
-      "25+ edited pictures (online gallery)",
+      "25+ edited pictures**",
       "up 5-7 days editing time",
     ],
     additional:
@@ -47,9 +47,9 @@ const servicesData = [
     price: 250,
     includes: [
       "up 2 hour",
-      "shooting at your place (in home lifestyle photoshoot)",
+      "lifestyle photo shoot",
       "up to 2 outfits",
-      "25-30 edited pictures (online gallery)",
+      "25-30 edited pictures**",
       "up 5-7 days editing time",
     ],
   },
@@ -62,9 +62,10 @@ const Services = () => {
 
   return (
     <section className="services">
-      <h1>Services</h1>
+      <h1>Pricing</h1>
       <div className="service">{services}</div>
       <p>* {servicesData[0].additional}</p>
+      <p>** All pictures will be deployed to an online gallery.</p>
     </section>
   );
 };
