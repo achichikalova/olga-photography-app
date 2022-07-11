@@ -1,4 +1,5 @@
 import React from "react";
+import "./ServiceCard.scss";
 
 const ServiceCard = ({ title, price, includes, additional }) => {
   const includesList = includes.map((item) => {
@@ -7,16 +8,12 @@ const ServiceCard = ({ title, price, includes, additional }) => {
 
   return (
     <div className="service-card">
-      <h2>
-        {title}/${price}
-        <span>{additional && "*"}</span>
-      </h2>
+      <h2>{title}</h2>
+      <ul>{includesList}</ul>
       <h3>
-        ${price}
+        Price ${price}
         <span>{additional && "*"}</span>
       </h3>
-      <ul>{includesList}</ul>
-      <button></button>
     </div>
   );
 };

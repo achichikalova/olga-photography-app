@@ -1,0 +1,56 @@
+.service {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    width: 330px;
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 1s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 500px;
+      border: 1px solid #fff;
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding: 0 10px;
+
+      li {
+        list-style: none;
+        text-transform: uppercase;
+        padding: 10px;
+      }
+    }
+
+    h3 {
+      padding: 15px 55px;
+      font-size: 1.2rem;
+      background-color: transparent;
+      color: #b6a996;
+      border: 2px solid #d9cab4;
+      margin: 2rem auto;
+    }
+  }
+}
