@@ -1,0 +1,12 @@
+.work {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    width: 20vw;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+}
