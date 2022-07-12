@@ -2,8 +2,11 @@
 
 .about {
   width: 100%;
+  position: relative;
 
   .intro {
+    position: absolute;
+    margin-top: 5rem;
     width: 45vw;
     height: 20vh;
     background-color: rgb(236, 228, 216);
@@ -24,12 +27,14 @@
   }
 
   .about-info {
+    padding-top: 10rem;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
     article {
       width: 30vw;
+      padding-top: 5rem;
       margin: 3rem auto;
 
       p {
