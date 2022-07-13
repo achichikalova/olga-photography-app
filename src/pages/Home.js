@@ -12,17 +12,16 @@ const Home = () => {
   const carousel = [Family2, Couple, Individual, Couple2, Individual2];
   return (
     <section className="home">
-      <div className="parallax">
+      <div className="carousel">
         <Carousel
           interval={10000}
           renderDots={({ activeIndex, setActiveIndex }) => <div />}
         >
           {carousel.map((item, i) => {
-            return <img src={item} alt="parallax" key={i} draggable="false" />;
+            return <img src={item} alt="carousel" key={i} draggable="false" />;
           })}
         </Carousel>
       </div>
-
       <div className="info">
         <div className="quote">
           <p>
