@@ -3,11 +3,13 @@
 .about {
   width: 100%;
   position: relative;
+  margin-bottom: 3rem;
 
   .intro {
     position: absolute;
-    margin-top: 5rem;
-    width: 45vw;
+    left: 0;
+    top: 3rem;
+    width: 43vw;
     height: 20vh;
     background-color: rgb(236, 228, 216);
     display: flex;
