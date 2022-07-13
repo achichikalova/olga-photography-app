@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import RecentWork from "./pages/RecentWork";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/services" element={<Services />} />
+      </Routes>
+      <Routes>
+        <Route path="/services/:theme" element={<Gallery />} />
       </Routes>
       <Routes>
         <Route path="/work" element={<RecentWork />} />
