@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
-import { listAll, ref, getDownloadURL } from "firebase/storage";
-import { useEffect, useState } from "react";
+import { getDownloadURL, listAll, ref } from "firebase/storage";
+import React, { useEffect, useRef, useState } from "react";
+import ImageGallery from "react-image-gallery";
 import { storage } from "../firebase/config";
 import "./RecentWork.scss";
 
 const RecentWork = () => {
   const [images, setImages] = useState([]);
+  const [theme, setTheme] = useState("couple");
 
-  const imagesRef = ref(storage, "/newborn");
+  const imagesRef = ref(storage, `/${theme}`);
   const shouldFetch = useRef(true);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const RecentWork = () => {
         res.items
           .forEach((item) => {
             getDownloadURL(item).then((url) => {
-              setImages((prev) => [...prev, url]);
+              setImages((prev) => [...prev, { original: url, thumbnail: url }]);
             });
           })
           .catch((error) => {
@@ -27,13 +28,15 @@ const RecentWork = () => {
     }
   }, [imagesRef]);
 
-  console.log(images.length);
-
   return (
-    <div className="work">
-      {images.map((url) => {
-        return <img src={url} alt="gallery" />;
-      })}
+    <div className="recent-work">
+      <div className="themes">
+        <button>Couple</button>
+        <button>Family</button>
+        <button>Newborn</button>
+        <button>Individual</button>
+      </div>
+      <ImageGallery items={images} />
     </div>
   );
 };
