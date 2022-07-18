@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300&display=swap");
 
 .home {
   width: 100%;
@@ -37,26 +37,27 @@
       left: 5rem;
       top: 0;
       width: 30vw;
-      height: 20vh;
+      height: fit-content;
+      max-height: 30vh;
       background-color: rgb(236, 228, 216);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3rem;
       z-index: 2;
+      padding: 3rem;
 
       p {
-        font-size: clamp(1.3rem, 2.5rem, 3rem);
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
         width: auto;
         font-family: "Poppins", sans-serif;
       }
 
       @media screen and (max-width: 1024px) {
-        width: 40vw;
+        width: 60vw;
         height: 15vh;
         left: 0;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 850px) {
         width: 70vw;
         height: 25vh;
         margin-left: -5rem;
@@ -74,13 +75,8 @@
       object-position: center;
 
       @media screen and (max-width: 1024px) {
-        width: 50vw;
-        height: 50vh;
-        right: 10rem;
-      }
-
-      @media screen and (max-width: 768px) {
         width: 80vw;
+        height: 50vh;
         right: -5rem;
       }
     }
