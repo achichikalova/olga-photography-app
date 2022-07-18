@@ -62,7 +62,7 @@ const Services = () => {
 
   return (
     <section className="services">
-      <h1>Pricing</h1>
+      <h1>Packages</h1>
       <div className="service">{services}</div>
       <p>* {servicesData[0].additional}</p>
       <p>** All pictures will be deployed to an online gallery.</p>
