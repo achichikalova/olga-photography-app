@@ -24,7 +24,7 @@ function App() {
         <Route path="/services/:theme" element={<Gallery />} />
       </Routes>
       <Routes>
-        <Route path="/work" element={<RecentWork />} />
+        <Route path="/galleries" element={<RecentWork />} />
       </Routes>
       <Footer />
     </BrowserRouter>

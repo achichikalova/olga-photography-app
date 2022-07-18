@@ -38,9 +38,9 @@ const Navigation = () => {
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
-          to="/work"
+          to="/galleries"
         >
-          Recent Work
+          Galleries
         </NavLink>
       </nav>
     </div>
