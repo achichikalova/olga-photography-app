@@ -14,7 +14,9 @@ const Home = () => {
     <section className="home">
       <div className="carousel">
         <Carousel
-          interval={10000}
+          interval={5000}
+          renderArrowLeft={({ activeIndex, setActiveIndex }) => <div />}
+          renderArrowRight={({ activeIndex, setActiveIndex }) => <div />}
           renderDots={({ activeIndex, setActiveIndex }) => <div />}
         >
           {carousel.map((item, i) => {
