@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Services from "./pages/Services";
-import RecentWork from "./pages/RecentWork";
 import Gallery from "./pages/Gallery";
+import Galleries from "./pages/Galleries";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path="/services/:theme" element={<Gallery />} />
       </Routes>
       <Routes>
-        <Route path="/galleries" element={<RecentWork />} />
+        <Route path="/galleries" element={<Galleries />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -2,16 +2,22 @@ import { getDownloadURL, listAll, ref } from "firebase/storage";
 import React, { useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import { storage } from "../firebase/config";
-import "./RecentWork.scss";
+import "./Galleries.scss";
 
-const RecentWork = () => {
+const Galleries = () => {
   const [images, setImages] = useState([]);
   const [theme, setTheme] = useState("couple");
+  console.log(theme);
+
+  const handleClick = (param) => {
+    setTheme(param);
+  };
 
   const imagesRef = ref(storage, `/${theme}`);
   const shouldFetch = useRef(true);
 
   useEffect(() => {
+    console.log(theme);
     if (shouldFetch.current) {
       shouldFetch.current = false;
       listAll(imagesRef).then((res) => {
@@ -26,19 +32,26 @@ const RecentWork = () => {
           });
       });
     }
-  }, [imagesRef]);
+  }, [theme]);
 
   return (
     <div className="recent-work">
-      <div className="themes">
-        <button>Couple</button>
-        <button>Family</button>
-        <button>Newborn</button>
-        <button>Individual</button>
+      <div className="theme-btns">
+        <button onClick={() => handleClick("couple")}>Couple</button>
+        <button onClick={() => handleClick("family")}>Family</button>
+        <button onClick={() => handleClick("newborn")}>Newborn</button>
+        <button onClick={() => handleClick("individual")}>Individual</button>
       </div>
-      <ImageGallery items={images} />
+      <div className="gallery-carousel">
+        <ImageGallery
+          autoPlay={true}
+          showIndex={true}
+          showThumbnails={false}
+          items={images}
+        />
+      </div>
     </div>
   );
 };
 
-export default RecentWork;
+export default Galleries;
