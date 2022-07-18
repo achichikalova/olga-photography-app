@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceCard from "../components/ServiceCard";
 import "./Services.scss";
+import { GiArrowDunk } from "react-icons/gi";
 
 const servicesData = [
   {
@@ -62,7 +63,12 @@ const Services = () => {
 
   return (
     <section className="services">
-      <h1>Packages</h1>
+      <div className="title">
+        <h1>Packages</h1>
+        <span>
+          click on an package to see gallery! <GiArrowDunk className="icon" />
+        </span>
+      </div>
       <div className="service">{services}</div>
       <p>* {servicesData[0].additional}</p>
       <p>** All pictures will be deployed to an online gallery.</p>

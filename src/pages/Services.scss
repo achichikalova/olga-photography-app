@@ -9,15 +9,45 @@
   flex-direction: column;
   background-color: rgb(236, 228, 216);
   padding-bottom: 2rem;
+  margin-bottom: -3rem;
 
-  h1 {
-    margin: 6rem auto 2rem auto;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    h1 {
+      margin: 6rem auto;
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    span {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 2rem;
+      color: #b6a996;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-self: flex-end;
+      align-items: flex-end;
+
+      .icon {
+        transform: rotate(70deg);
+        margin: 0 1rem;
+        font-size: 2rem;
+      }
+    }
   }
 
   p {
     margin: 1rem auto;
     padding: 0 2rem;
+    color: #b6a996;
   }
 }
