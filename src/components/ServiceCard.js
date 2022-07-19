@@ -10,16 +10,16 @@ const ServiceCard = ({ title, price, includes, additional }) => {
   const theme = title.toLowerCase();
 
   return (
-    <Link to={`/services/${theme}`} className="service">
-      <div className="service-card">
+    <div className="service">
+      <Link to={`/services/${theme}`} className="service-card">
         <h2>{title}</h2>
         <ul>{includesList}</ul>
         <h3>
           Price ${price}
           <span>{additional && "*"}</span>
         </h3>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
