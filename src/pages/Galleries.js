@@ -7,17 +7,17 @@ import "./Galleries.scss";
 const Galleries = () => {
   const [images, setImages] = useState([]);
   const [theme, setTheme] = useState("couple");
-  console.log(theme);
-
-  const handleClick = (param) => {
-    setTheme(param);
-  };
 
   const imagesRef = ref(storage, `/${theme}`);
   const shouldFetch = useRef(true);
 
+  const handleClick = (param) => {
+    setTheme(param);
+    shouldFetch.current = true;
+    setImages([]);
+  };
+
   useEffect(() => {
-    console.log(theme);
     if (shouldFetch.current) {
       shouldFetch.current = false;
       listAll(imagesRef).then((res) => {
@@ -32,7 +32,7 @@ const Galleries = () => {
           });
       });
     }
-  }, [theme]);
+  }, [imagesRef, theme]);
 
   return (
     <div className="recent-work">
@@ -46,7 +46,7 @@ const Galleries = () => {
         <ImageGallery
           autoPlay={true}
           showIndex={true}
-          showThumbnails={false}
+          // showThumbnails={false}
           items={images}
         />
       </div>
