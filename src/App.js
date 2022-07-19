@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Galleries from "./pages/Galleries";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/galleries" element={<Galleries />} />
+      </Routes>
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>
