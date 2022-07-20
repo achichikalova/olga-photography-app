@@ -3,6 +3,8 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
 import { VscLocation } from "react-icons/vsc";
+import { motion } from "framer-motion";
+import Olya from "../assets/images/contact_me.jpg";
 import "./Contact.scss";
 
 const Contact = () => {
@@ -10,14 +12,25 @@ const Contact = () => {
     <div className="contact">
       <div className="get-in-touch">
         <div className="info">
-          <h3>Get In Touch</h3>
-          <p>
+          <motion.h3
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
+          >
+            Get In Touch
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <br />
             Looking to book a lifestyle session?
             <br />
             I'd love to hear from you!
             <br />
             Fill out the contact form below, and let's chat!
-          </p>
+          </motion.p>
           <div className="icons">
             <a
               href="https://www.instagram.com/olya.schastlivceva/"
@@ -79,16 +92,24 @@ const Contact = () => {
           <button type="submit">Send</button>
         </form>
       </div>
-      <div className="contact-info">
-        <h3>Call/Text Me</h3>
-        <p>
-          <GiSmartphone className="icon" /> 4317741265
-        </p>
-        <h3>Location</h3>
-        <p>
-          <VscLocation className="icon" /> Leduc, Alberta
-        </p>
-      </div>
+      <motion.div
+        className="contact-info"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        <div className="info">
+          <h3>Call/Text Me</h3>
+          <p>
+            <GiSmartphone className="icon" /> 4317741265
+          </p>
+          <h3>My Location</h3>
+          <p>
+            <VscLocation className="icon" /> Leduc, Alberta
+          </p>
+        </div>
+        <img src={Olya} alt="Smiling beautiful woman" />
+      </motion.div>
     </div>
   );
 };
