@@ -5,6 +5,7 @@ import { storage } from "../firebase/config";
 import "./Gallery.scss";
 import { NavLink, useParams } from "react-router-dom";
 import { MdKeyboardBackspace } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
@@ -38,7 +39,13 @@ const Gallery = () => {
           {images.map((url) => {
             return (
               <li>
-                <img src={url} alt="gallery" />
+                <motion.img
+                  src={url}
+                  alt="gallery"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.1 }}
+                />
               </li>
             );
           })}

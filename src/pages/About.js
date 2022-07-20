@@ -1,19 +1,29 @@
 import React from "react";
 import Olya from "../assets/images/about.jpg";
 import "./About.scss";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="about">
-      <div className="intro">
+      <motion.div
+        className="intro"
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", duration: 1, bounce: 0.1 }}
+      >
         <span>
           Hey,
           <br />
           I'm Olya
         </span>
-      </div>
+      </motion.div>
       <div className="about-info">
-        <article>
+        <motion.article
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+        >
           <p>Hi there!</p>
           <p>
             I'm so glad you're here! I'm Olya, a lifestyle photographer. I'm
@@ -28,8 +38,9 @@ const About = () => {
             Each of you is unique — this is what I want to show through my
             pictures, so I have an individual approach to each shooting. Don't
             be shy. Just be yourself, and we'll take some fantastic pictures.
+            And don't forget that picture is worth 1000 words!
           </p>
-        </article>
+        </motion.article>
         <img src={Olya} alt="Smiling beautiful woman" />
       </div>
     </div>
