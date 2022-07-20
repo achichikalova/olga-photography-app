@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   margin: 1rem auto;
 
@@ -47,8 +47,17 @@
   }
 
   .gallery-carousel {
-    width: 50vw;
-    margin: 2rem;
+    height: 50vw;
+    margin: 3rem auto -3rem auto;
+
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-gallery-image {
+      height: 75vh;
+    }
 
     .image-gallery-svg {
       color: #fff;
