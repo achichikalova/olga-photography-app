@@ -22,7 +22,7 @@ const Navigation = () => {
           className={(navData) => (navData.isActive ? "active" : "link")}
           to="/about"
         >
-          About Me
+          About
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
@@ -34,7 +34,7 @@ const Navigation = () => {
           className={(navData) => (navData.isActive ? "active" : "link")}
           to="/contact"
         >
-          Contact Me
+          Contact
         </NavLink>
         <NavLink
           className={(navData) => (navData.isActive ? "active" : "link")}
