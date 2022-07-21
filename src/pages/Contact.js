@@ -95,18 +95,23 @@ const Contact = () => {
       <motion.div
         className="contact-info"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="info">
-          <h3>Call/Text Me</h3>
-          <p>
-            <GiSmartphone className="icon" /> 4317741265
-          </p>
-          <h3>My Location</h3>
-          <p>
-            <VscLocation className="icon" /> Leduc, Alberta
-          </p>
+          <div className="location">
+            <h3>My Location</h3>
+            <p>
+              <VscLocation className="icon" /> Leduc, Alberta
+            </p>
+          </div>
+          <div className="phone">
+            <h3>Call/Text Me</h3>
+            <p>
+              <GiSmartphone className="icon" /> 4317741265
+            </p>
+          </div>
         </div>
         <img src={Olya} alt="Smiling beautiful woman" />
       </motion.div>
