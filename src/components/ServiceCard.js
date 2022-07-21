@@ -13,9 +13,10 @@ const ServiceCard = ({ title, price, includes, additional }) => {
   return (
     <motion.div
       className="service"
-      initial={{ y: "-100vw" }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", duration: 1, bounce: 0.3 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+      viewport={{ once: false }}
     >
       <Link to={`/services/${theme}`} className="service-card">
         <h2>{title}</h2>

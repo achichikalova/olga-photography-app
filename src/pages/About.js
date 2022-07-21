@@ -10,7 +10,7 @@ const About = () => {
         className="intro"
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
-        transition={{ type: "spring", duration: 1, bounce: 0.1 }}
+        transition={{ type: "spring", duration: 0.5, bounce: 0.1 }}
       >
         <span>
           Hey,
@@ -22,7 +22,7 @@ const About = () => {
         <motion.article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p>Hi there!</p>
           <p>

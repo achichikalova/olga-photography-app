@@ -22,7 +22,7 @@ const Contact = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 0.1 }}
           >
             <br />
             Looking to book a lifestyle session?
@@ -96,7 +96,7 @@ const Contact = () => {
         className="contact-info"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <div className="info">
           <h3>Call/Text Me</h3>

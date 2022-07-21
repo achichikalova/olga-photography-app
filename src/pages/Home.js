@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
-import Family from "../assets/images/9.jpg";
+import Family from "../assets/images/family.jpg";
 import ImageGallery from "react-image-gallery";
 import { storage } from "../firebase/config";
+import { motion } from "framer-motion";
 import "./Home.scss";
 
 const Home = () => {
@@ -15,11 +16,9 @@ const Home = () => {
     if (shouldFetch.current) {
       shouldFetch.current = false;
       listAll(imagesRef).then((res) => {
-        console.log(res);
         res.items
           .forEach((item) => {
             getDownloadURL(item).then((url) => {
-              console.log(url);
               setImages((prev) => [...prev, { original: url, thumbnail: url }]);
             });
           })
@@ -30,11 +29,14 @@ const Home = () => {
     }
   }, [imagesRef]);
 
-  console.log(images);
-
   return (
     <section className="home">
-      <div className="carousel">
+      <motion.div
+        className="carousel"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
         <ImageGallery
           autoPlay={true}
           showIndex={true}
@@ -43,11 +45,17 @@ const Home = () => {
           slideInterval={5000}
           items={images}
           showFullscreenButton={false}
-          showBullets={true}
+          showPlayButton={false}
         />
-      </div>
+      </motion.div>
       <div className="info">
-        <div className="quote">
+        <motion.div
+          className="quote"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          viewport={{ once: false }}
+        >
           <p>
             "Each of you is <em>unique</em> —
             <br />
@@ -55,7 +63,7 @@ const Home = () => {
             <br />
             through my pictures."
           </p>
-        </div>
+        </motion.div>
         <img src={Family} alt="" />
       </div>
     </section>
