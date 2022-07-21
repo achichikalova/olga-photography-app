@@ -19,12 +19,6 @@
     align-items: center;
     list-style-type: none;
     width: 60%;
-    font-weight: 500;
-
-    .search {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
 
     .link {
       text-decoration: none;
@@ -37,10 +31,14 @@
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column;
     height: 100px;
     margin-bottom: 3rem;
+
+    .logo img {
+      width: 30vw;
+    }
 
     .logo a {
       display: flex;

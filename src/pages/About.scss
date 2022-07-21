@@ -3,7 +3,7 @@
 .about {
   width: 100%;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 70px;
 
   .intro {
     position: absolute;
@@ -24,7 +24,7 @@
 
     @media screen and (max-width: 1020px) {
       width: 80vw;
-      height: 15vh;
+      height: fit-content;
     }
   }
 

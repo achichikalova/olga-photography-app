@@ -5,7 +5,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: calc(100vh - 190px);
   width: 100%;
   margin: 1rem auto;
 
@@ -47,14 +47,15 @@
   }
 
   .gallery-carousel {
-    height: 50vw;
-    margin: 3rem auto -3rem auto;
+    min-height: 20vw;
+    margin: 3rem auto;
     width: 100%;
 
     .image-gallery-slides {
       background-color: transparent;
       height: 75vh;
       min-width: 90vw;
+      overflow: hidden;
     }
 
     .image-gallery {

@@ -35,11 +35,15 @@
     button:hover {
       border-color: rgb(236, 216, 217);
     }
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 3rem;
+    }
   }
 
   .info {
     width: 80vw;
-    height: 85vh;
+    min-height: 65vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,9 +52,9 @@
 
     .quote {
       position: absolute;
-      left: 5rem;
-      top: 0;
-      width: 30vw;
+      left: -5rem;
+      top: -10rem;
+      min-width: 30vw;
       height: fit-content;
       max-height: 30vh;
       background-color: rgb(236, 228, 216);
@@ -67,32 +71,40 @@
       }
 
       @media screen and (max-width: 1024px) {
+        // position: relative;
         width: 60vw;
         height: 15vh;
         left: 0;
+        top: -5rem;
       }
       @media screen and (max-width: 850px) {
         width: 70vw;
-        height: 25vh;
+        min-height: 14vh;
         margin-left: -5rem;
       }
     }
 
     img {
       position: absolute;
-      right: 5rem;
+      right: -5rem;
       bottom: 0;
-      width: 40vw;
-      height: 60vh;
+      min-width: 60vw;
+      max-height: 70vh;
       overflow: hidden;
       object-fit: cover;
       object-position: center;
 
       @media screen and (max-width: 1024px) {
-        width: 80vw;
-        height: 50vh;
-        right: -5rem;
+        position: relative;
+        width: 100vw;
+        min-height: 25vh;
+        right: 0;
+        top: 5rem;
       }
+    }
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
     }
   }
 }
