@@ -7,9 +7,27 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="icons">
-        <AiOutlineInstagram className="icon" />
-        <FaFacebookF className="icon" />
-        <FaPinterestP className="icon" />
+        <a
+          href="https://www.instagram.com/olya.schastlivceva/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AiOutlineInstagram className="icon" />
+        </a>
+        <a
+          href="https://www.facebook.com/olyaschastlivceva.ca"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebookF className="icon" />
+        </a>
+        <a
+          href="https://www.pinterest.ca/olyaschastlivceva/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaPinterestP className="icon" />
+        </a>
       </div>
       <p>All content Copyright © 2022 Olga Photography</p>
     </footer>
