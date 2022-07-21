@@ -11,8 +11,9 @@
 
   .carousel {
     width: 100%;
-    height: auto;
+    height: 90vh;
     margin-bottom: 10rem;
+    background-color: rgb(236, 228, 216);
 
     img {
       width: 100%;
@@ -20,6 +21,19 @@
       overflow: hidden;
       object-fit: cover;
       object-position: center;
+    }
+
+    .image-gallery-svg {
+      color: #fff;
+
+      &:hover {
+        color: rgb(236, 228, 216);
+      }
+    }
+
+    button.active,
+    button:hover {
+      border-color: rgb(236, 216, 217);
     }
   }
 
@@ -43,7 +57,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 2;
+      z-index: 5;
       padding: 3rem;
 
       p {
