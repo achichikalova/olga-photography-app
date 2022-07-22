@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Galleries from "./pages/Galleries";
 import Contact from "./pages/Contact";
+import ThankYouPage from "./pages/ThankYouPage";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Routes>
+        <Route path="/thanks" element={<ThankYouPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
