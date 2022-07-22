@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./ServiceCard.scss";
 import { motion } from "framer-motion";
 
-const ServiceCard = ({ title, price, includes, additional }) => {
+const ServiceCard = ({ title, price, includes }) => {
   const includesList = includes.map((item) => {
     return <li>{item}</li>;
   });
@@ -21,10 +21,7 @@ const ServiceCard = ({ title, price, includes, additional }) => {
       <Link to={`/services/${theme}`} className="service-card">
         <h2>{title}</h2>
         <ul>{includesList}</ul>
-        <h3>
-          Price ${price}
-          <span>{additional && "*"}</span>
-        </h3>
+        <h3>Price ${price}</h3>
       </Link>
     </motion.div>
   );
