@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,24 +15,13 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-      </Routes>
-      <Routes>
         <Route path="/about" element={<About />} />
-      </Routes>
-      <Routes>
         <Route path="/services" element={<Services />} />
-      </Routes>
-      <Routes>
         <Route path="/services/:theme" element={<Gallery />} />
-      </Routes>
-      <Routes>
         <Route path="/galleries" element={<Galleries />} />
-      </Routes>
-      <Routes>
         <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Routes>
         <Route path="/thanks" element={<ThankYouPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </BrowserRouter>
