@@ -58,7 +58,7 @@ const Contact = () => {
       </div>
       <div className="contact-form">
         <form
-          action="https://formsubmit.co/4cebbdcab72bb31c13b206b70bd6ec87"
+          action="https://formsubmit.co/olyaschastlivcevaphotographer@gmail.com"
           method="POST"
         >
           <input
@@ -67,11 +67,6 @@ const Contact = () => {
             value="New email from your website!"
           />
           <input type="text" name="_honey" style={{ display: "none" }} />
-          <input
-            type="hidden"
-            name="_autoresponse"
-            value="Thank you for choosing me, I will be in touch with you soon."
-          />
           <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_template" value="basic" />
 
