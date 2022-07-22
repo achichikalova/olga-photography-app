@@ -66,7 +66,7 @@ const Services = () => {
       <div className="title">
         <h1>Packages</h1>
         <span>
-          click on an package to see gallery! <GiArrowDunk className="icon" />
+          click on a package to see gallery! <GiArrowDunk className="icon" />
         </span>
       </div>
       <div className="service">{services}</div>
