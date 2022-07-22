@@ -69,7 +69,11 @@ const Contact = () => {
           <input type="text" name="_honey" style={{ display: "none" }} />
           <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_template" value="basic" />
-
+          <input
+            type="hidden"
+            name="_next"
+            value="https://olya-schastlivceva.web.app/thanks"
+          ></input>
           <input type="text" name="name" placeholder="Your Name" required />
           <input
             type="email"
@@ -102,7 +106,7 @@ const Contact = () => {
             </p>
           </div>
           <div className="phone">
-            <h3>Call/Text Me</h3>
+            <h3>Text Me</h3>
             <p>
               <GiSmartphone className="icon" /> 4317741265
             </p>
