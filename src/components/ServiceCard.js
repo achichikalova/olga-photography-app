@@ -15,7 +15,7 @@ const ServiceCard = ({ title, price, includes, additional }) => {
       className="service"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
+      transition={{ duration: 0.7 }}
       viewport={{ once: false }}
     >
       <Link to={`/services/${theme}`} className="service-card">
