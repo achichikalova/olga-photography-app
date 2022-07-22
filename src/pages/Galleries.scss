@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   min-height: calc(100vh - 190px);
+  height: fit-content;
   width: 100%;
   margin: 1rem auto;
 
@@ -49,20 +50,28 @@
   .gallery-carousel {
     min-height: 20vw;
     margin: 3rem auto;
-    width: 100%;
 
     .image-gallery-slides {
       background-color: transparent;
       height: 75vh;
-      min-width: 90vw;
       overflow: hidden;
+      margin: 0 auto;
+
+      .image-gallery-slide {
+        width: 100%;
+      }
     }
 
     .image-gallery {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .image-gallery-content {
+        width: 80vw;
+      }
     }
+
     .image-gallery-image {
       height: 75vh;
       width: 100%;

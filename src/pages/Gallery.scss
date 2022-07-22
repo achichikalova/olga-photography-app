@@ -36,11 +36,11 @@
         margin: 5px;
         list-style: none;
 
-        @media (max-aspect-ratio: 1/1) {
+        @media screen and (max-aspect-ratio: 1/1) {
           height: 30vh;
         }
 
-        @media (max-height: 480px) {
+        @media screen and (max-height: 480px) {
           height: 80vh;
         }
 
@@ -49,7 +49,6 @@
           min-width: 100%;
           object-fit: cover;
           vertical-align: bottom;
-          margin: 10px;
         }
       }
 
@@ -58,7 +57,7 @@
       }
     }
 
-    @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    @media screen and (max-aspect-ratio: 1/1) and (max-width: 480px) {
       ul {
         flex-direction: row;
 

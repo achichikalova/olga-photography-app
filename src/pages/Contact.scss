@@ -76,7 +76,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    max-height: 50vh;
+    min-height: 50vh;
 
     @media screen and (max-width: 1200px) {
       justify-content: center;
@@ -97,6 +97,7 @@
         width: 350px;
         height: 450px;
         margin: 2rem auto;
+        padding: 0 2rem;
       }
 
       input {
@@ -106,7 +107,7 @@
         width: 100%;
         outline: none;
         background-color: rgb(236, 228, 216);
-        font-size: clamp(1.3rem, 1.5rem, 1.6rem);
+        font-size: clamp(1rem, 1.2rem, 1.3rem);
       }
 
       textarea {
@@ -117,7 +118,7 @@
         height: 10vh;
         outline: none;
         background-color: rgb(236, 228, 216);
-        font-size: clamp(1.3rem, 1.5rem, 1.6rem);
+        font-size: clamp(1rem, 1.2rem, 1.3rem);
       }
 
       button {
