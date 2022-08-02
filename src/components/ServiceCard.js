@@ -21,7 +21,7 @@ const ServiceCard = ({ title, price, includes }) => {
       <Link to={`/services/${theme}`} className="service-card">
         <h2>{title}</h2>
         <ul>{includesList}</ul>
-        <h3>Price ${price}</h3>
+        <h3>Starting from ${price}</h3>
       </Link>
     </motion.div>
   );
