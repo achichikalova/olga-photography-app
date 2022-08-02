@@ -3,6 +3,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
 import { VscLocation } from "react-icons/vsc";
+import { MdOutlineMail } from "react-icons/md";
 import { motion } from "framer-motion";
 import Olya from "../assets/images/contact_me.jpg";
 import "./Contact.scss";
@@ -29,13 +30,14 @@ const Contact = () => {
             <br />
             I'd love to hear from you!
             <br />
-            Fill out the contact form below, and let's chat!
+            Fill out the contact form below or email me and let's chat.
           </motion.p>
           <div className="icons">
             <a
               href="https://www.instagram.com/olya.schastlivceva/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram"
             >
               <AiOutlineInstagram className="icon" />
             </a>
@@ -43,6 +45,7 @@ const Contact = () => {
               href="https://www.facebook.com/olyaschastlivceva.ca"
               target="_blank"
               rel="noreferrer"
+              aria-label="Facebook"
             >
               <FaFacebookF className="icon" />
             </a>
@@ -50,8 +53,16 @@ const Contact = () => {
               href="https://www.pinterest.ca/olyaschastlivceva/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Pinterest"
             >
               <FaPinterestP className="icon" />
+            </a>
+            <a
+              href="mailto:olyaschastlivcevaphotographer@gmail.com"
+              rel="noreferrer"
+              aria-label="Email"
+            >
+              <MdOutlineMail className="icon" />
             </a>
           </div>
         </div>
