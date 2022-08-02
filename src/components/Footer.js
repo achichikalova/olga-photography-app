@@ -11,6 +11,7 @@ const Footer = () => {
           href="https://www.instagram.com/olya.schastlivceva/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Instagram"
         >
           <AiOutlineInstagram className="icon" />
         </a>
@@ -18,6 +19,7 @@ const Footer = () => {
           href="https://www.facebook.com/olyaschastlivceva.ca"
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook"
         >
           <FaFacebookF className="icon" />
         </a>
@@ -25,11 +27,12 @@ const Footer = () => {
           href="https://www.pinterest.ca/olyaschastlivceva/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Pinterest"
         >
           <FaPinterestP className="icon" />
         </a>
       </div>
-      <p>All content Copyright © 2022 Olga Photography</p>
+      <p>All content Copyright © Olya Schastlivceva</p>
     </footer>
   );
 };
