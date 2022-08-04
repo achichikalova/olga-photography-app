@@ -14,7 +14,7 @@ const ThankYouPage = () => {
         patience.
         <br />
         <br />
-        Have a great day!
+        Have a nice one!
       </p>
       <NavLink to="/" className="back">
         <MdKeyboardBackspace /> Back to Home Page

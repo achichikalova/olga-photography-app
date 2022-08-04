@@ -11,7 +11,7 @@ const servicesData = [
       "up to 1 - 1.5 hour",
       "1 location",
       "1 outfit",
-      "20+ edited pictures",
+      "20 edited pictures **",
       "up 5-7 days editing time",
     ],
   },
@@ -22,18 +22,18 @@ const servicesData = [
       "up to 1 - 1.5 hour",
       "1 location",
       "1 outfit",
-      "20+ edited pictures",
+      "20 edited pictures **",
       "up 5-7 days editing time",
     ],
   },
   {
     title: "Family",
-    price: 250,
+    price: 300,
     includes: [
-      "up 1.5 hour",
+      "up 1.5 hour †",
       "1 location",
       "1 outfit",
-      "25+ edited pictures",
+      "25 edited pictures **",
       "up 5-7 days editing time",
     ],
   },
@@ -44,7 +44,7 @@ const servicesData = [
       "up 2 hour",
       "lifestyle photoshoot *",
       "up to 2 outfits",
-      "25-30 edited pictures",
+      "25 edited pictures **",
       "up 5-7 days editing time",
     ],
   },
@@ -65,10 +65,13 @@ const Services = () => {
       </div>
       <div className="service">{services}</div>
       <p>
-        Photoshoot includes assistance in choosing outfits, location, idea. All
-        pictures will be deployed to an online gallery.
+        Photoshoot includes assistance in choosing outfits, location, and theme.
+        All pictures will be deployed to an online gallery. Studio rental
+        doesn't include in the price.
       </p>
       <p>* Lifestyle photoshoot at your place.</p>
+      <p>** Additional edited picture $10 each.</p>
+      <p>† Up to 4 people, additional people $25 per person.</p>
     </section>
   );
 };
